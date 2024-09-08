@@ -6,8 +6,7 @@ namespace Project01_MVC.Controllers
     {
         public ActionResult Index()
         {
-            //ContentResult result = new ContentResult();
-            //result.Content = "Hello From Content Result";
+            
             return Content("Hello From Content Result");
         }
         public string AboutUs()
