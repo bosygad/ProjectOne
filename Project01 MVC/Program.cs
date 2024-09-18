@@ -6,9 +6,10 @@ namespace Project01_MVC
         {
 
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddControllers();
+            builder.Services.AddControllersWithViews();
             var app = builder.Build();
             app.UseRouting();
+            app.UseStaticFiles();
             #region Routing
             //app.UseEndpoints(endpoints =>
             //{
