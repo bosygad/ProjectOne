@@ -6,9 +6,10 @@ namespace Project01_MVC
         {
 
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddControllers();
+            builder.Services.AddControllersWithViews();
             var app = builder.Build();
             app.UseRouting();
+            app.UseStaticFiles();
             #region Routing
             //app.UseEndpoints(endpoints =>
             //{
@@ -48,9 +49,10 @@ namespace Project01_MVC
 
             app.MapControllerRoute(
                 name: "defult",
-                pattern: "/{Controller = Home}/{Action = Index}",
-               defaults: new { Controller = "Home", Action = "Index" });
-         //   app.Run(async (HttpContext) => { await HttpContext.Response.WriteAsync("Your Requested Page Not Found "); });
+                pattern: "/{Controller=Home}/{Action=Index}",
+               defaults: new { Controller = "Home", Action = "Index" }
+               );
+            //   app.Run(async (HttpContext) => { await HttpContext.Response.WriteAsync("Your Requested Page Not Found "); });
 
 
             app.Run();

@@ -4,14 +4,27 @@ namespace Project01_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
             
-            return Content("Hello From Content Result");
+            //return Content("Hello From Content Result");
+            return View();
         }
-        public string AboutUs()
+        public IActionResult AboutUs()
         {
-            return "This is About Us Action";
+            // return "This is About Us Action";
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+           
+            return View();
+
+        }
+        public IActionResult Privacy()
+        {
+           
+            return View();
         }
     }
 }
